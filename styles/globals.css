@@ -14,3 +14,11 @@ a {
 * {
   box-sizing: border-box;
 }
+
+:root {
+  --White-Background: #F4F4F4;
+  --Dark-blue: #184655;
+  --Green: #00B19F;
+  --Text: #212121;
+  --Red: #A4303F;
+}
