@@ -12,7 +12,7 @@ export const deleteCep = createAction('DELETE_CEP')
 
 export default createReducer(INITIAL_STATE,{
     [addCep.type]:(state, action) => action.payload,
-    [deleteCep.type]:(state, action) => action.payload
+    [deleteCep.type]:(state, action) => INITIAL_STATE
     
 })
 

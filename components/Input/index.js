@@ -6,13 +6,6 @@ import { useDispatch } from "react-redux"
 
 import { getAddress } from '../../store/fetchActions'
 
-const init = {
-    logradouro: '',
-    bairro: '',
-    localidade: '',
-    uf: ''
-}
-
 export function Input(){
     const [cep, setCep] = useState('')
 
@@ -25,13 +18,12 @@ export function Input(){
 
     useEffect(() => {
         if(cep.length === 8) dispatch(getAddress(cep))
-        if(cep.length === 0) dispatch({ type: 'DELETE_CEP', payload: init})
+        if(cep.length !== 8) dispatch({ type: 'DELETE_CEP' })
     }, [cep])
 
     return(
         <form className={styles.container} onSubmit={handleSubmit}>
             <input onChange={e=>setCep(e.target.value)} type="number" placeholder="CEP"/>
-            <button type="submit">Enviar</button>
         </form>     
     )
 }
