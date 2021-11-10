@@ -1,11 +1,17 @@
 import { configureStore } from '@reduxjs/toolkit'
-import { createStore } from 'redux'
+import { createStore,combineReducers } from 'redux'
 
 
-import reducer from './ducks/cep'
+import cepReducer from './ducks/cep'
+import loadingReducer from './ducks/loading'
+
+const rootReducer = combineReducers({
+    cep: cepReducer,
+    loading: loadingReducer
+})
 
 export default configureStore({
-    reducer: reducer,
+    reducer: rootReducer,
 })
 
 //export default createStore(reducer)

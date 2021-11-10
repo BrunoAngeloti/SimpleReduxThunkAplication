@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import { Data } from '../components/Data'
 import { Input } from '../components/Input'
+import { Loading } from '../components/Loading'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
       </Head>
       <Input />
       <Data />
+      <Loading />
     </div>
   )
 }

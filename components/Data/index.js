@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux'
 
 export function Data(){
 
-    const {logradouro, bairro, localidade, uf} = useSelector(state=>state);
+    const {logradouro, bairro, localidade, uf} = useSelector(state=>state.cep);
 
     return(
         <section className={styles.container}>
